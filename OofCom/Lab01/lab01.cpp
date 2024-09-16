@@ -14,7 +14,7 @@ using namespace std;
  *************************************************************************************************/
 void printBinary(unsigned int num) {
     // Цикл от 31 до 0 (по позициям битов)
-    for (int i = (sizeof(unsigned int) * 8); i > 0; i--) {
+    for (int i = ((sizeof(unsigned int) * 8) - 1); i >= 0; i--) {
         unsigned int musk = 1 << i; // Создаём маску для проверки конкретного бита
         cout << ((num & musk) ? '1' : '0'); // Выводим 1, если бит установлен, иначе 0
     }
@@ -34,11 +34,10 @@ void printBinary(float num) {
     u.f = num; // Сохраняем число float в union
 
     // Цикл для вывода 32 бит числа float как unsigned int
-    for (int i = 31; i >= 0; i--) {
+    for (int i = ((sizeof(float) * 8) - 1); i >= 0; i--) {
         unsigned int mask = 1 << i; // Маска для проверки конкретного бита
         cout << ((u.i & mask) ? '1' : '0'); // Выводим 1, если бит установлен, иначе 0
     }
-
     cout << endl;
 }
 
@@ -46,6 +45,7 @@ void printBinary(float num) {
 int main() {
     unsigned int uIntNum;
     float floatNum;
+
 
     // Ввод unsigned int числа
     cout << "Enter an unsigned int number: ";
