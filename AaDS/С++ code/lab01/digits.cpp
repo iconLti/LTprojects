@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_DIGITS = 10; // 0..9
 
 // Structures block
 // ________________________________________________________________________________________________
@@ -108,6 +109,8 @@ Set* intersectSets(Set* A, Set* B, Set* C, Set* D) {
 
 
 int main() {
+
+    cout << sizeof(bool) << endl;
 
     Set* A =nullptr, * B = nullptr, * C = nullptr, * D = nullptr;
     cout << "Create set 'A'" << endl;
