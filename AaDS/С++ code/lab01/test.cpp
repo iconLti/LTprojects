@@ -1,23 +1,81 @@
 #include <iostream>
 #include <bitset>
+#include <chrono>
+
 using namespace std;
 
-// Константы для работы с десятичными цифрами
-const int MAX_DIGITS = 10;
+using Clock = std::chrono::high_resolution_clock;
+using TimePoint = std::chrono::time_point<Clock>;
+TimePoint start_time, end_time;
+
+const int MAX_DIGITS = 10; // Работаем с десятичными цифрами (0-9)
+const int REPEAT_COUNT = 1000000;
+
+void start_timer() {
+    start_time = Clock::now();
+}
+void end_timer(const string &operation, int repetitions) {
+    end_time = Clock::now();
+    auto duration = chrono::duration_cast<chrono::nanoseconds>(end_time - start_time).count();
+    cout << operation << " took " << duration / repetitions << " nanoseconds per iteration." << endl;
+}
 
 // Структура для односвязного списка
 struct Set {
-    char el;        // Character (digit)
-    Set* next;      // Pointer to the next element
+  char el;
+  Set* next;
 
-    Set(char e, Set* n = nullptr) : el(e), next(n) { }
-
-    ~Set() {
-        delete next;
-    }
+  Set(char e, Set* n = nullptr) : el(e), next(n) { }
+ 
+  ~Set() {
+    delete next;
+  }
 };
 
-// Проверка на наличие элемента в односвязном списке
+
+void createArrayFromInput(int arr[], int &size) {
+    char input;
+    bool seen[MAX_DIGITS] = {false}; // Массив для отслеживания уже добавленных цифр
+    cout << "Enter set digits (0-9), finish with 'x': ";
+    while (cin >> input && input != 'x') {
+        if (isdigit(input)) {
+            int digit = input - '0';
+            // Проверка на уникальность
+            if (!seen[digit]) {
+                arr[size++] = digit;
+                seen[digit] = true; // Отмечаем, что цифра уже была введена
+            }
+        }
+    }
+}
+void createArrayRandom(int arr[], int &size) {
+    bool seen[MAX_DIGITS] = {false};
+    size = 0;
+    while (size < MAX_DIGITS) {
+        int digit = rand() % 10;
+        if (!seen[digit]) {
+            arr[size++] = digit;
+            seen[digit] = true;
+        }
+    }
+}
+
+
+Set* convertArrayToSet(const int arr[], int size) {
+    Set* head = nullptr;
+    Set* tail = nullptr;
+
+    for (int i = 0; i < size; i++) {
+        Set* newNode = new Set(arr[i] + '0');
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            tail->next = newNode;
+        }
+        tail = newNode;
+    }
+    return head;
+}
 bool contains(Set* head, char el) {
     Set* current = head;
     while (current != nullptr) {
@@ -29,176 +87,247 @@ bool contains(Set* head, char el) {
     return false;
 }
 
-// Функция создания множества через массив
-void createArrayFromInput(bool arr[]) {
-    char input;
-    cout << "Enter set digits (0-9), finish with 'x': ";
-    while (cin >> input && input != 'x') {
-        if (isdigit(input)) {
-            arr[input - '0'] = true;  // Преобразование символа в индекс
-        }
+typedef bitset<MAX_DIGITS> bs;
+bs convertArrayToBitset(const int arr[], int size) {
+    bs bset;
+    for (int i = 0; i < size; i++) {
+        bset.set(arr[i]);
+    }
+    return bset;
+}
+
+unsigned short convertArrayToWord(const int arr[], int size) {
+    unsigned short word = 0;
+    for (int i = 0; i < size; i++) {
+        word |= (1 << arr[i]);
+    }
+    return word;
+}
+
+
+void intersectArrays(const int A[], int sizeA, const int B[], int sizeB,
+                     const int C[], int sizeC, const int D[], int sizeD,
+                     int result[], int& resultSize) {
+    for (int i = 0; i < sizeA; i++) {
+        int el = A[i];
+        bool foundInB = false, foundInC = false, foundInD = false;
+
+        for (int j = 0; j < sizeB; j++) if (B[j] == el) foundInB = true;
+        for (int j = 0; j < sizeC; j++) if (C[j] == el) foundInC = true;
+        for (int j = 0; j < sizeD; j++) if (D[j] == el) foundInD = true;
+
+        if (foundInB && foundInC && foundInD) result[resultSize++] = el;
     }
 }
 
-// Преобразование массива в односвязный список
-Set* convertArrayToSet(bool arr[]) {
-    Set* head = nullptr;
-    Set* tail = nullptr;
-
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        if (arr[i]) {
-            Set* newNode = new Set(i + '0');  // Преобразуем индекс обратно в символ
-            if (head == nullptr) {
-                head = newNode;
-            } else {
-                tail->next = newNode;
-            }
-            tail = newNode;
-        }
-    }
-    return head;
-}
-
-// Вывод односвязного списка
-void outputSet(Set* head) {
-    Set* current = head;
-    while (current != nullptr) {
-        cout << current->el << " ";
-        current = current->next;
-    }
-    cout << endl;
-}
-
-// Интерсекция множеств для односвязного списка
 Set* intersectSets(Set* A, Set* B, Set* C, Set* D) {
     Set* resultHead = nullptr;
     Set* resultTail = nullptr;
 
     Set* current = A;
+
     while (current != nullptr) {
         char el = current->el;
+
         if (contains(B, el) && contains(C, el) && contains(D, el)) {
             Set* newNode = new Set(el);
+
             if (resultHead == nullptr) {
                 resultHead = newNode;
             } else {
                 resultTail->next = newNode;
             }
+
             resultTail = newNode;
         }
+
         current = current->next;
     }
     return resultHead;
 }
 
-// Пересечение массивов
-void intersectArrays(bool A[], bool B[], bool C[], bool D[], bool result[]) {
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        result[i] = A[i] && B[i] && C[i] && D[i];
-    }
+bs intersectBitsets(bs A, bs B, bs C, bs D) {
+    return A & B & C & D;
 }
 
-// Вывод массива
-void outputArray(bool arr[]) {
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        if (arr[i]) {
-            cout << i << " ";
-        }
+unsigned int intersectWord(unsigned int A, unsigned int B, 
+                              unsigned int C, unsigned int D) {
+    return A & B & C & D;
+}
+
+
+void outputArray(const int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
     }
     cout << endl;
 }
 
-// Пересечение для битовых массивов
-void intersectBitsets(bool A[], bool B[], bool C[], bool D[], bool result[]) {
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        result[i] = A[i] && B[i] && C[i] && D[i];
+void outputSet(Set* head) {
+    while (head != nullptr) {
+        cout << head->el << " ";
+        head = head->next;
     }
+    cout << endl;
 }
 
-// Интерсекция для машинного слова
-unsigned int intersectWord(unsigned int A, unsigned int B, unsigned int C, unsigned int D) {
-    return A & B & C & D;
+void outputBitset(bs bset) {
+    for (int i = 0; i < MAX_DIGITS; i++) if (bset.test(i)) cout << i << " ";
+    cout << endl;
 }
 
-// Вывод машинного слова
 void outputWord(unsigned int word) {
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        if (word & (1 << i)) {
-            cout << i << " ";
-        }
-    }
+    for (int i = 0; i < MAX_DIGITS; i++) if (word & (1 << i)) cout << i << " ";
     cout << endl;
 }
 
 int main() {
-    // Массивы для работы с множествами
-    bool A[MAX_DIGITS] = {false}, B[MAX_DIGITS] = {false}, C[MAX_DIGITS] = {false}, D[MAX_DIGITS] = {false};
+    srand(time(0));
 
-    // Создание множеств через ввод
-    cout << "Create set A:" << endl;
-    createArrayFromInput(A);
+    // Множества для работы
+    int A[MAX_DIGITS], B[MAX_DIGITS], C[MAX_DIGITS], D[MAX_DIGITS];
+    int sizeA = 0, sizeB = 0, sizeC = 0, sizeD = 0;
 
-    cout << "Create set B:" << endl;
-    createArrayFromInput(B);
 
-    cout << "Create set C:" << endl;
-    createArrayFromInput(C);
+    cout << "Choose input method (1 - manual, 2 - auto-generate): ";
+    int inputChoice;
+    cin >> inputChoice;
 
-    cout << "Create set D:" << endl;
-    createArrayFromInput(D);
-
-    // Преобразование массивов в односвязные списки
-    Set* setA = convertArrayToSet(A);
-    Set* setB = convertArrayToSet(B);
-    Set* setC = convertArrayToSet(C);
-    Set* setD = convertArrayToSet(D);
-
-    // Вывод списков
-    cout << "\nSet A (List): "; outputSet(setA);
-    cout << "Set B (List): "; outputSet(setB);
-    cout << "Set C (List): "; outputSet(setC);
-    cout << "Set D (List): "; outputSet(setD);
-
-    // Пересечение списков
-    Set* setE = intersectSets(setA, setB, setC, setD);
-    cout << "\nSet E (Intersection of Lists): "; 
-    if (setE != nullptr) {
-        outputSet(setE);
+    if (inputChoice == 1) {
+        cout << "Create set A:" << endl;
+        createArrayFromInput(A, sizeA);
+        cout << "Create set B:" << endl;
+        createArrayFromInput(B, sizeB);
+        cout << "Create set C:" << endl;
+        createArrayFromInput(C, sizeC);
+        cout << "Create set D:" << endl;
+        createArrayFromInput(D, sizeD);
     } else {
-        cout << "Empty set.." << endl;
+        createArrayRandom(A, sizeA);
+        createArrayRandom(B, sizeB);
+        createArrayRandom(C, sizeC);
+        createArrayRandom(D, sizeD);
+        cout << "Generated sets: " << endl;
+        cout << "A: "; outputArray(A, sizeA);
+        cout << "B: "; outputArray(B, sizeB);
+        cout << "C: "; outputArray(C, sizeC);
+        cout << "D: "; outputArray(D, sizeD);
     }
 
-    // Пересечение массивов
-    bool resultArray[MAX_DIGITS] = {false};
-    intersectArrays(A, B, C, D, resultArray);
-    cout << "\nSet E (Intersection of Arrays): "; outputArray(resultArray);
+    cout << endl;
+    cout << endl;
 
-    // Пересечение для битовых массивов
-    bool resultBits[MAX_DIGITS] = {false};
-    intersectBitsets(A, B, C, D, resultBits);
-    cout << "\nSet E (Intersection of Bitsets): "; outputArray(resultBits);
+    cout << "set as array A: ";
+    outputArray(A, sizeA);
+    cout << "set as array B: ";
+    outputArray(B, sizeB);
+    cout << "set as array C: ";
+    outputArray(C, sizeC);
+    cout << "set as array D: ";
+    outputArray(D, sizeD);
 
-    // Работа с машинным словом
-    unsigned int wordA = 0, wordB = 0, wordC = 0, wordD = 0;
-
-    // Преобразование массивов в машинные слова
-    for (int i = 0; i < MAX_DIGITS; ++i) {
-        if (A[i]) wordA |= (1 << i);
-        if (B[i]) wordB |= (1 << i);
-        if (C[i]) wordC |= (1 << i);
-        if (D[i]) wordD |= (1 << i);
+    // Пересечение массивов и вывод результатов
+    int resultArray[MAX_DIGITS], resultSize = 0;
+    start_timer();
+    for (int i  = 0; i < REPEAT_COUNT; i++) {
+        intersectArrays(A, sizeA, B, sizeB, C, sizeC, D, sizeD, resultArray, resultSize);
+        resultSize = 0;
     }
+    end_timer("Array intersection", REPEAT_COUNT);
 
-    // Пересечение машинных слов
-    unsigned int wordE = intersectWord(wordA, wordB, wordC, wordD);
-    cout << "\nSet E (Intersection of Words): "; outputWord(wordE);
+    // Вывод результатов пересечения массивов
+    intersectArrays(A, sizeA, B, sizeB, C, sizeC, D, sizeD, resultArray, resultSize);
+    cout << "Array intersection result: ";
+    outputArray(resultArray, resultSize);
 
-    // Очистка памяти
-    delete setA;
-    delete setB;
-    delete setC;
-    delete setD;
-    delete setE;
+    cout << endl;
 
+    // Пересечение односвязных списков и вывод результатов
+    Set* setA = convertArrayToSet(A, sizeA);
+    Set* setB = convertArrayToSet(B, sizeB);
+    Set* setC = convertArrayToSet(C, sizeC);
+    Set* setD = convertArrayToSet(D, sizeD);
+
+    cout << "set as list A: ";
+    outputSet(setA);
+    cout << "set as list B: ";
+    outputSet(setB);
+    cout << "set as list C: ";
+    outputSet(setC);
+    cout << "set as list D: ";
+    outputSet(setD);
+    
+    start_timer();
+    for (int i = 0; i < REPEAT_COUNT; i++) {
+    Set* resultSet = intersectSets(setA, setB, setC, setD);
+    delete resultSet; // Очищаем память
+    }
+    end_timer("List intersection", REPEAT_COUNT);
+
+    // Вывод результатов пересечения списков
+    Set* resultSet = intersectSets(setA, setB, setC, setD);
+    cout << "List intersection result: ";
+    outputSet(resultSet);
+    delete resultSet; // Очистка результата
+
+    cout << endl;
+
+    // Пересечение битсетов и вывод результатов
+    bs bitsetA = convertArrayToBitset(A, sizeA);
+    bs bitsetB = convertArrayToBitset(B, sizeB);
+    bs bitsetC = convertArrayToBitset(C, sizeC);
+    bs bitsetD = convertArrayToBitset(D, sizeD);
+
+    cout << "set as arrayOfBits A: ";
+    outputBitset(bitsetA);
+    cout << "set as arrayOfBits B: ";
+    outputBitset(bitsetB);
+    cout << "set as arrayOfBits C: ";
+    outputBitset(bitsetC);
+    cout << "set as arrayOfBits D: ";
+    outputBitset(bitsetD);
+
+    start_timer();
+    for (int i  = 0; i < REPEAT_COUNT; i++) {
+        bitset<MAX_DIGITS> resultBitset = intersectBitsets(bitsetA, bitsetB, bitsetC, bitsetD);
+    }
+    end_timer("BitSet intersection", REPEAT_COUNT);
+
+    // Вывод результатов пересечения битсетов
+    bs resultBitset = intersectBitsets(bitsetA, bitsetB, bitsetC, bitsetD);
+    cout << "BitSet intersection result: ";
+    outputBitset(resultBitset);
+
+    cout << endl;
+
+    // Пересечение машинных слов и вывод результатов
+    unsigned int wordA = convertArrayToWord(A, sizeA);
+    unsigned int wordB = convertArrayToWord(B, sizeB);
+    unsigned int wordC = convertArrayToWord(C, sizeC);
+    unsigned int wordD = convertArrayToWord(D, sizeD);
+
+    cout << "set as word A: ";
+    outputWord(wordA);
+    cout << "set as word B: ";
+    outputWord(wordB);
+    cout << "set as word C: ";
+    outputWord(wordC);
+    cout << "set as word D: ";
+    outputWord(wordD);
+
+    start_timer();
+    for (int i  = 0; i < REPEAT_COUNT; i++) {
+        unsigned int resultWord = intersectWord(wordA, wordB, wordC, wordD);
+    }
+    end_timer("Word intersection", REPEAT_COUNT);
+
+    // Вывод результатов пересечения машинных слов
+    unsigned int resultWord = intersectWord(wordA, wordB, wordC, wordD);
+    cout << "Word intersection result: ";
+    outputWord(resultWord);
+
+    cout << endl;
+    cout << endl;
+    
     return 0;
 }
