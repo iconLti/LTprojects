@@ -9,7 +9,7 @@ using TimePoint = std::chrono::time_point<Clock>;
 TimePoint start_time, end_time;
 
 const int MAX_DIGITS = 10; // Работаем с десятичными цифрами (0-9)
-const int REPEAT_COUNT = 1000000; // Количество повторений для тестирования производительности
+const int REPEAT_COUNT = 10000000; // Количество повторений для тестирования производительности
 
 /**************************************************************************************************
  * @brief Начинает отсчет времени.
@@ -76,9 +76,10 @@ void createArrayFromInput(int arr[], int &size) {
  * @param size Размер массива.
  *************************************************************************************************/
 void createArrayRandom(int arr[], int &size) {
-    bool seen[MAX_DIGITS] = {false};
+    int iterationSize = rand() % 10;
+    bool seen[iterationSize] = {false};
     size = 0;
-    while (size < MAX_DIGITS) {
+    while (size < iterationSize) {
         int digit = rand() % 10;
         if (!seen[digit]) {
             arr[size++] = digit;
