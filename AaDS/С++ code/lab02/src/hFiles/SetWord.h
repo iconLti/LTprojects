@@ -7,43 +7,18 @@ namespace WordSet {
     private:
         unsigned short elements;
     public:
-        Set() : elements(0) {}
+        // Новый статический счётчик тегов
+        static int tagCounter;
+        int tag; // Уникальный тег для каждого множества
 
-        bool elCheck(int el) const {
-            return elements & (1 << el);
-        }
-
-        void add(int el) {
-            elements |= (1 << el);
-        }
-
-        void convertArrayToWordSet(const ArraySet::Set& set) {
-            const int* elements = set.getElements();
-            int size = set.getSize();
-            for (int i = 0; i < size; i++) {
-                add(elements[i]);
-            }
-        }
-
-        void clear() {
-            elements = 0;  // Устанавливаем все биты в 0
-        }
-
-        void outputWordSet() const {
-            int cnt = 0;
-            for (int i = 0; i < 10; i++) {
-                if (elCheck(i)) {
-                    std::cout << i << " ";
-                    cnt++;
-                }
-            }
-            if (!cnt) {
-                std::cout << "Set is empty.";
-            }
-            std::cout << std::endl;
-        }
-
-        unsigned short getElements() const { return elements; }
+        Set();
+        ~Set();
+        bool elCheck(int el) const;
+        void add(int el);
+        void convertArrayToWordSet(const ArraySet::Set& set);
+        void clear();
+        void outputWordSet() const;
+        unsigned short getElements() const;
 
     };
 }

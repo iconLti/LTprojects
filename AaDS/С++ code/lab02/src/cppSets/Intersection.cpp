@@ -1,8 +1,8 @@
-#include "hFiles/SetArray.h"
-#include "hFiles/SetList.h"
-#include "hFiles/SetWord.h"
-#include "hFiles/SetBitArray.h"
-#include "hFiles/Intersection.h"
+#include "../hFiles/SetArray.h"
+#include "../hFiles/SetList.h"
+#include "../hFiles/SetWord.h"
+#include "../hFiles/SetBitArray.h"
+#include "../hFiles/Intersection.h"
 
 #include <iostream>
 

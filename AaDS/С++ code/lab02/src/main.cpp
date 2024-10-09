@@ -7,6 +7,8 @@
 #include <iostream>
 #include <chrono>
 
+// g++ main.cpp cppSets\SetArray.cpp cppSets\Intersection.cpp cppSets\SetWord.cpp cppSets\SetList.cpp cppSets\SetBitArray.cpp  -o main.exe
+
 using Clock = std::chrono::high_resolution_clock;
 using TimePoint = std::chrono::time_point<Clock>;
 TimePoint start_time, end_time;
@@ -181,11 +183,7 @@ int main() {
             std::cin >> interRep;
         } while (interRep != "stop");
         
-
-        
-        
-       
-        
+     
         
         // end of programm logic
         std::cout << "\n\n";

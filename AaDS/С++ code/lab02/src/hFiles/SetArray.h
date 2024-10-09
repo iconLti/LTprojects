@@ -9,7 +9,6 @@ namespace ArraySet {
         int size; // кол-во элементов в множестве
 
         
-
     public:
         // Новый статический счётчик тегов
         static int tagCounter;
