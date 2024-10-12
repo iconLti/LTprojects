@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
@@ -9,7 +7,6 @@ import javax.swing.table.TableCellRenderer;
  * Основной класс, отвечающий за построение интерфейса приложения "Клиника".
  * Приложение предназначено для управления списком пациентов.
  * Включает добавление, удаление пациентов, сохранение данных и поиск по имени.
- *
  */
 public class GUI {
     // Объявление компонентов
@@ -62,32 +59,19 @@ public class GUI {
         searchType = new JComboBox<>(new String[]{"Ключевому слову", "Имени пациента", "Имени врача"});
         searchField = new JTextField(25);
         searchButton = new JButton("Поиск");
+
+
         // Текст подсказка
         String placeholder = "詳細を入力してください";
         searchField.setText(placeholder);
         searchField.setForeground(Color.RED); // цвет текста
-        // Обработчик для изменения текста при "фокусе"
-        searchField.addFocusListener(new FocusAdapter() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                if (searchField.getText().equals(placeholder)) {
-                    searchField.setText("");
-                    searchField.setForeground(Color.BLACK);
-                }
-            }
-            @Override
-            public void focusLost(FocusEvent e) {
-                if (searchField.getText().isEmpty()) {
-                    searchField.setForeground(Color.RED);
-                    searchField.setText(placeholder);
-                }
-            }
-        });
+        searchField.addFocusListener(Listeners.getSearchFieldFocusListener(searchField, placeholder));
 
         searchPanel.add(new JLabel("Поиск по:"));
         searchPanel.add(searchType);
         searchPanel.add(searchField);
         searchPanel.add(searchButton);
+
 
         // Контейнер для обеих частей
         JPanel topPanel = new JPanel(new GridLayout(1, 2)); // Одна строка, два столбца
@@ -119,8 +103,6 @@ public class GUI {
                             cell.setBackground(Color.YELLOW);
                             break;
                         case "Отменен":
-                            cell.setBackground(Color.RED);
-                            break;
                         case "Отменён":
                             cell.setBackground(Color.RED);
                             break;
@@ -139,74 +121,20 @@ public class GUI {
 
         // Сортировка
         sortType = new JComboBox<>(new String[]{"По имени", "По дате"});
-        sortType.addActionListener(e -> {
-            String selectedSort = (String) sortType.getSelectedItem();
-            if ("По имени".equals(selectedSort)) {
-                JOptionPane.showMessageDialog(frame, "Сортировка по имени");
-            } else if ("По дате".equals(selectedSort)) {
-                JOptionPane.showMessageDialog(frame, "Сортировка по дате");
-            }
-        });
         frame.add(sortType, BorderLayout.EAST);
 
-        // Добавляем действия для кнопок
-        addActionListeners();
+
+        // Слушатели (Action)
+        // поиск
+        searchButton.addActionListener(Listeners.getSearchListener(dataTable, searchField, searchType, frame));
+        //кнопки
+        saveButton.addActionListener(Listeners.getSaveDataListener(frame));
+        addButton.addActionListener(Listeners.getAddPatientListener(tableModel));
+        deleteButton.addActionListener(Listeners.getDeletePatientListener(tableModel, dataTable, frame));
+        //сортировка
+        sortType.addActionListener(Listeners.getSortTypeActionListener(sortType, frame));
 
         // Визуализация
         frame.setVisible(true);
-    }
-
-
-    /**
-     * Метод для добавления обработчиков событий к кнопкам интерфейса.
-     * Включает добавление, удаление пациентов, сохранение данных и поиск по имени или врачу.
-     */
-    private void addActionListeners() {
-        // Добавление нового пациента
-        addButton.addActionListener(e -> {
-            String name = JOptionPane.showInputDialog("Введите имя пациента:");
-            String disease = JOptionPane.showInputDialog("Введите название болезни:");
-            String doctor = JOptionPane.showInputDialog("Введите имя врача:");
-            String specialization = JOptionPane.showInputDialog("Введите специализацию врача:");
-            String date = JOptionPane.showInputDialog("Введите дату приёма:");
-            String status = JOptionPane.showInputDialog("Введите статус:");
-            if (name != null && disease != null && doctor != null && date != null && status != null) {
-                tableModel.addRow(new Object[]{name, disease, doctor, specialization, date, status});
-            } else {
-                JOptionPane.showMessageDialog(frame, "Все поля должны быть заполнены!");
-            }
-        });
-
-        // Удаление пациента
-        deleteButton.addActionListener(e -> {
-            int selectedRow = dataTable.getSelectedRow();
-            if (selectedRow != -1) {
-                tableModel.removeRow(selectedRow);
-            } else {
-                JOptionPane.showMessageDialog(frame, "Выберите пациента для удаления.");
-            }
-        });
-
-        // Сохранение данных (можно добавить логику сохранения в файл)
-        saveButton.addActionListener(e -> JOptionPane.showMessageDialog(frame, "Данные сохранены!"));
-
-        // Поиск пациента или врача
-        searchButton.addActionListener(e -> {
-            String searchText = searchField.getText().toLowerCase();
-            int searchColumn = searchType.getSelectedIndex() == 1 ? 0 : 2; // 0 - имя пациента, 1 - имя врача
-
-            boolean found = false;
-            for (int i = 0; i < dataTable.getRowCount(); i++) {
-                String value = dataTable.getValueAt(i, searchColumn).toString().toLowerCase();
-                if (value.contains(searchText)) {
-                    dataTable.setRowSelectionInterval(i, i);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                JOptionPane.showMessageDialog(frame, "Ничего не найдено.");
-            }
-        });
     }
 }
