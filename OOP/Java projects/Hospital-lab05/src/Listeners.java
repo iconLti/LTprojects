@@ -1,7 +1,8 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.*;
-import java.awt.Color;
+import java.io.*;
 
 /**
  * Класс, содержащий слушатели для различных действий в приложении.
@@ -155,6 +156,90 @@ public class Listeners {
                 if (searchField.getText().isEmpty()) {
                     searchField.setForeground(Color.RED);
                     searchField.setText(placeholder);
+                }
+            }
+        };
+    }
+
+
+    // Work with file //
+    private static File loadedFile; // Храним ссылку на загруженный файл
+
+    public static void setLoadedFile(File file) {
+        loadedFile = file; // Метод для установки файла при загрузке
+    }
+
+    public static ActionListener getLoadDataListener(DefaultTableModel tableModel, JFrame frame) {
+        return e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            int result = fileChooser.showOpenDialog(frame);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File file = fileChooser.getSelectedFile();
+                try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                    String line;
+                    tableModel.setRowCount(0);
+                    while ((line = br.readLine()) != null) {
+                        String[] data = line.split(";");
+                        tableModel.addRow(data);
+                    }
+                    // Сохраняем файл для дальнейшего использования при сохранении данных
+                    Listeners.setLoadedFile(file);
+                    JOptionPane.showMessageDialog(frame, "Данные успешно загружены");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Ошибка загрузки в файл: " + ex.getMessage(),
+                            "   エラー", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        };
+    }
+
+
+    public static ActionListener getSaveDataListener(JFrame frame, DefaultTableModel tableModel) {
+        return e -> {
+            if (loadedFile != null) {
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(loadedFile))) {
+                    for (int row = 0; row < tableModel.getRowCount(); row++) {
+                        for (int col = 0; col < tableModel.getColumnCount(); col++) {
+                            bw.write(String.valueOf(tableModel.getValueAt(row, col)));
+                            if (col < tableModel.getColumnCount() - 1) {
+                                bw.write(";");
+                            }
+                        }
+                        bw.newLine(); // Переход на новую строку
+                    }
+                    JOptionPane.showMessageDialog(frame, "Данные успешно сохранены!");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Ошибка сохранения файла: " + ex.getMessage(),
+                            "Ошибка", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Файл для сохранения не загружен!",
+                        "Ошибка", JOptionPane.ERROR_MESSAGE);
+            }
+        };
+    }
+
+    public static ActionListener getSaveToPathDataListener(JFrame frame, DefaultTableModel tableModel) {
+        return e -> {
+            JFileChooser fileChooser = new JFileChooser();
+            int result = fileChooser.showSaveDialog(frame);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File file = fileChooser.getSelectedFile();
+                try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
+                    for (int row = 0; row < tableModel.getRowCount(); row++) {
+                        for (int col = 0; col < tableModel.getColumnCount(); col++) {
+                            pw.print(tableModel.getValueAt(row, col));
+                            if (col < tableModel.getColumnCount() - 1) {
+                                pw.print(";");
+                            }
+                        }
+                        pw.println();
+                    }
+                    JOptionPane.showMessageDialog(frame, "Данные успешно сохранены!");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Ошибка сохранения файла: " + ex.getMessage(), "Ошибка", JOptionPane.ERROR_MESSAGE);
                 }
             }
         };

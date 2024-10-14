@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
@@ -82,10 +83,7 @@ public class GUI {
 
         // Таблица с данными
         String[] columns = {"Имя пациента", "Болезнь", "Врач", "Специализация врача", "Дата приёма", "Статус"};
-        tableModel = new DefaultTableModel(new Object[][]{
-                {"Иван Иванов", "ОРВИ", "Доктор А", "Терапевт", "01.10.2024", "Принят"},
-                {"ティム", "幸せになりたい", "Доктор Б", "Психиатр", "02.10.2024", "Ожидание"}
-        }, columns);
+        tableModel = new DefaultTableModel(new Object[][]{}, columns);
 
         dataTable = new JTable(tableModel) {
             @Override
@@ -94,7 +92,6 @@ public class GUI {
                 // Проверяем, что это колонка "Статус" (индекс 5)
                 if (column == 5) {
                     String status = (String) getValueAt(row, column);
-
                     switch (status) {
                         case "Принят":
                             cell.setBackground(Color.GREEN);
@@ -128,11 +125,14 @@ public class GUI {
         // поиск
         searchButton.addActionListener(Listeners.getSearchListener(dataTable, searchField, searchType, frame));
         //кнопки
-        saveButton.addActionListener(Listeners.getSaveDataListener(frame));
+        saveButton.addActionListener(Listeners.getSaveDataListener(frame, tableModel));
         addButton.addActionListener(Listeners.getAddPatientListener(tableModel));
         deleteButton.addActionListener(Listeners.getDeletePatientListener(tableModel, dataTable, frame));
         //сортировка
         sortType.addActionListener(Listeners.getSortTypeActionListener(sortType, frame));
+        // Слушатели для меню
+        openItem.addActionListener(Listeners.getLoadDataListener(tableModel, frame));
+        saveItem.addActionListener(Listeners.getSaveToPathDataListener(frame, tableModel));
 
         // Визуализация
         frame.setVisible(true);
