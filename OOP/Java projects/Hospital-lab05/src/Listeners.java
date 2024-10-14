@@ -169,6 +169,13 @@ public class Listeners {
         loadedFile = file; // Метод для установки файла при загрузке
     }
 
+    /**
+     * Создает слушатель для выгрузки данных из файла
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame    окно, в котором отображаются сообщения
+     * @return ActionListener для выгрузки данных
+     */
     public static ActionListener getLoadDataListener(DefaultTableModel tableModel, JFrame frame) {
         return e -> {
             JFileChooser fileChooser = new JFileChooser();
@@ -194,7 +201,13 @@ public class Listeners {
         };
     }
 
-
+    /**
+     * Создает слушатель для сохранения данных в тот же файл
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame    окно, в котором отображаются сообщения
+     * @return ActionListener для сохранения данных
+     */
     public static ActionListener getSaveDataListener(JFrame frame, DefaultTableModel tableModel) {
         return e -> {
             if (loadedFile != null) {
@@ -220,6 +233,13 @@ public class Listeners {
         };
     }
 
+    /**
+     * Создает слушатель для сохранения данных в файл в формате "сохранить как"
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame    окно, в котором отображаются сообщения
+     * @return ActionListener для сохранения данных
+     */
     public static ActionListener getSaveToPathDataListener(JFrame frame, DefaultTableModel tableModel) {
         return e -> {
             JFileChooser fileChooser = new JFileChooser();
