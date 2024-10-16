@@ -125,7 +125,7 @@ public class GUI {
         // поиск
         searchButton.addActionListener(Listeners.getSearchListener(dataTable, searchField, searchType, frame));
         //кнопки
-        saveButton.addActionListener(Listeners.getSaveDataListener(frame, tableModel));
+        //saveButton.addActionListener(Listeners.getSaveDataListener(frame, tableModel));
         addButton.addActionListener(Listeners.getAddPatientListener(tableModel));
         deleteButton.addActionListener(Listeners.getDeletePatientListener(tableModel, dataTable, frame));
         //сортировка
