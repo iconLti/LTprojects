@@ -70,15 +70,7 @@ public class Listeners {
         };
     }
 
-//    /**
-//     * Создает слушатель для сохранения данных.
-//     *
-//     * @param frame окно, в котором отображаются сообщения
-//     * @return ActionListener для сохранения данных
-//     */
-//    public static ActionListener getSaveDataListener(JFrame frame) {
-//        return e -> JOptionPane.showMessageDialog(frame, "Данные сохранены!");
-//    }
+
 
     /**
      * Создает слушатель для поиска пациента по имени или врачу.
@@ -161,45 +153,12 @@ public class Listeners {
         };
     }
 
-
-    // Work with file //
-//    private static File loadedFile; // Храним ссылку на загруженный файл
-
-//    public static void setLoadedFile(File file) {
-//        loadedFile = file; // Метод для установки файла при загрузке
-//    }
-
-//    /**
-//     * Создает слушатель для выгрузки данных из файла
-//     *
-//     * @param tableModel ячейки таблицы
-//     * @param frame    окно, в котором отображаются сообщения
-//     * @return ActionListener для выгрузки данных
-//     */
-//    public static ActionListener getLoadDataListener(DefaultTableModel tableModel, JFrame frame) {
-//        return e -> {
-//            JFileChooser fileChooser = new JFileChooser();
-//            int result = fileChooser.showOpenDialog(frame);
-//
-//            if (result == JFileChooser.APPROVE_OPTION) {
-//                File file = fileChooser.getSelectedFile();
-//                try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-//                    String line;
-//                    tableModel.setRowCount(0);
-//                    while ((line = br.readLine()) != null) {
-//                        String[] data = line.split(";");
-//                        tableModel.addRow(data);
-//                    }
-//                    // Сохраняем файл для дальнейшего использования при сохранении данных
-//                    Listeners.setLoadedFile(file);
-//                    JOptionPane.showMessageDialog(frame, "Данные успешно загружены");
-//                } catch (IOException ex) {
-//                    JOptionPane.showMessageDialog(frame, "Ошибка загрузки в файл: " + ex.getMessage(),
-//                            "   エラー", JOptionPane.ERROR_MESSAGE);
-//                }
-//            }
-//        };
-//    }
+    /**
+     * Создает слушатель для выгрузки данных из файла
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame      окно, в котором отображаются сообщения
+     */
     public static ActionListener getLoadDataListener(DefaultTableModel tableModel, JFrame frame) {
         return e -> {
             JFileChooser fileChooser = new JFileChooser(); // Окно для выбора файла
@@ -212,6 +171,12 @@ public class Listeners {
         };
     }
 
+    /**
+     * Создает слушатель для сохранения данных в формате "сохранить как"
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame      окно, в котором отображаются сообщения
+     */
     public static ActionListener getSaveToPathDataListener(JFrame frame, DefaultTableModel tableModel) {
         return e -> {
             JFileChooser fileChooser = new JFileChooser(); // Окно для выбора пути сохранения
@@ -253,36 +218,5 @@ public class Listeners {
 
 
 
-//    /**
-//     * Создает слушатель для сохранения данных в файл в формате "сохранить как"
-//     *
-//     * @param tableModel ячейки таблицы
-//     * @param frame    окно, в котором отображаются сообщения
-//     * @return ActionListener для сохранения данных
-//     */
-//    public static ActionListener getSaveToPathDataListener(JFrame frame, DefaultTableModel tableModel) {
-//        return e -> {
-//            JFileChooser fileChooser = new JFileChooser();
-//            int result = fileChooser.showSaveDialog(frame);
-//
-//            if (result == JFileChooser.APPROVE_OPTION) {
-//                File file = fileChooser.getSelectedFile();
-//                try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
-//                    for (int row = 0; row < tableModel.getRowCount(); row++) {
-//                        for (int col = 0; col < tableModel.getColumnCount(); col++) {
-//                            pw.print(tableModel.getValueAt(row, col));
-//                            if (col < tableModel.getColumnCount() - 1) {
-//                                pw.print(";");
-//                            }
-//                        }
-//                        pw.println();
-//                    }
-//                    JOptionPane.showMessageDialog(frame, "Данные успешно сохранены!");
-//                } catch (IOException ex) {
-//                    JOptionPane.showMessageDialog(frame, "Ошибка сохранения файла: " + ex.getMessage(), "Ошибка", JOptionPane.ERROR_MESSAGE);
-//                }
-//            }
-//        };
-//    }
 }
 
