@@ -205,8 +205,8 @@ public class Listeners {
             JFileChooser fileChooser = new JFileChooser(); // Окно для выбора файла
             int result = fileChooser.showOpenDialog(frame); // Открытие диалогового окна для выбора файла
             if (result == JFileChooser.APPROVE_OPTION) {
-                File file = fileChooser.getSelectedFile(); // Получаем выбранный файл
-                XMLfile.loadFromXML(tableModel, file); // Загружаем данные из файла с помощью XMLReader
+                GUI.openedFile = fileChooser.getSelectedFile(); // Получаем выбранный файл
+                XMLfile.loadFromXML(tableModel, GUI.openedFile); // Загружаем данные из файла с помощью XMLReader
                 JOptionPane.showMessageDialog(frame, "Данные успешно загружены!"); // Показываем сообщение об успехе
             }
         };
@@ -225,37 +225,33 @@ public class Listeners {
     }
 
 
-//    /**
-//     * Создает слушатель для сохранения данных в тот же файл
-//     *
-//     * @param tableModel ячейки таблицы
-//     * @param frame    окно, в котором отображаются сообщения
-//     * @return ActionListener для сохранения данных
-//     */
-//    public static ActionListener getSaveDataListener(JFrame frame, DefaultTableModel tableModel) {
-//        return e -> {
-//            if (loadedFile != null) {
-//                try (BufferedWriter bw = new BufferedWriter(new FileWriter(loadedFile))) {
-//                    for (int row = 0; row < tableModel.getRowCount(); row++) {
-//                        for (int col = 0; col < tableModel.getColumnCount(); col++) {
-//                            bw.write(String.valueOf(tableModel.getValueAt(row, col)));
-//                            if (col < tableModel.getColumnCount() - 1) {
-//                                bw.write(";");
-//                            }
-//                        }
-//                        bw.newLine(); // Переход на новую строку
-//                    }
-//                    JOptionPane.showMessageDialog(frame, "Данные успешно сохранены!");
-//                } catch (IOException ex) {
-//                    JOptionPane.showMessageDialog(frame, "Ошибка сохранения файла: " + ex.getMessage(),
-//                            "Ошибка", JOptionPane.ERROR_MESSAGE);
-//                }
-//            } else {
-//                JOptionPane.showMessageDialog(frame, "Файл для сохранения не загружен!",
-//                        "Ошибка", JOptionPane.ERROR_MESSAGE);
-//            }
-//        };
-//    }
+    /**
+     * Создает слушатель для сохранения данных в тот же файл
+     *
+     * @param tableModel ячейки таблицы
+     * @param frame      окно, в котором отображаются сообщения
+     */
+    public static ActionListener getSaveDataListener(JFrame frame, DefaultTableModel tableModel) {
+        return e -> {
+            if (GUI.openedFile != null) {
+                try {
+                    // Используем класс XMLfile для сохранения данных
+                    XMLfile.saveToXML(tableModel, GUI.openedFile);
+                    JOptionPane.showMessageDialog(frame, "Данные успешно сохранены в файл: " + GUI.openedFile.getName());
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(frame, "Ошибка сохранения файла: " + ex.getMessage(),
+                            "Ошибка", JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Файл для сохранения не загружен!",
+                        "Ошибка", JOptionPane.ERROR_MESSAGE);
+            }
+        };
+    }
+
+
+
+
 
 //    /**
 //     * Создает слушатель для сохранения данных в файл в формате "сохранить как"

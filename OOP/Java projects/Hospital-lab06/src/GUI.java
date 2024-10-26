@@ -24,6 +24,7 @@ public class GUI {
     private JTable dataTable;
     private JScrollPane tableScrollPane;
     private DefaultTableModel tableModel;
+    static File openedFile;
 
     /**
      * Метод для построения и отображения графического интерфейса.
@@ -125,7 +126,7 @@ public class GUI {
         // поиск
         searchButton.addActionListener(Listeners.getSearchListener(dataTable, searchField, searchType, frame));
         //кнопки
-        //saveButton.addActionListener(Listeners.getSaveDataListener(frame, tableModel));
+        saveButton.addActionListener(Listeners.getSaveDataListener(frame, tableModel));
         addButton.addActionListener(Listeners.getAddPatientListener(tableModel));
         deleteButton.addActionListener(Listeners.getDeletePatientListener(tableModel, dataTable, frame));
         //сортировка
