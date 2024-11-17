@@ -24,7 +24,7 @@ public class GUI {
     private JTable dataTable;
     private JScrollPane tableScrollPane;
     private DefaultTableModel tableModel;
-    static File openedFile, tempFile;
+    static File openedFile = new File("src/docs/mainReport.xml"), tempFile;
 
     /**
      * Метод для построения и отображения графического интерфейса.
