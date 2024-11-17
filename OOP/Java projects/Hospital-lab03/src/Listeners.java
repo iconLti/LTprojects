@@ -16,23 +16,34 @@ public class Listeners {
      */
     public static ActionListener getAddPatientListener(DefaultTableModel tableModel) {
         return e -> {
-            String name = JOptionPane.showInputDialog("Введите имя пациента:");
-            String disease = JOptionPane.showInputDialog("Введите название болезни:");
-            String doctor = JOptionPane.showInputDialog("Введите имя врача:");
-            String specialization = JOptionPane.showInputDialog("Введите специализацию врача:");
-            String date = JOptionPane.showInputDialog("Введите дату приёма:");
-            String status = JOptionPane.showInputDialog("Введите статус:");
+            try {
+                String name = JOptionPane.showInputDialog("Введите имя пациента:");
+                String disease = JOptionPane.showInputDialog("Введите название болезни:");
+                String doctor = JOptionPane.showInputDialog("Введите имя врача:");
+                String specialization = JOptionPane.showInputDialog("Введите специализацию врача:");
+                String date = JOptionPane.showInputDialog("Введите дату приёма:");
+                String status = JOptionPane.showInputDialog("Введите статус:");
 
-            // Проверяем, что все поля заполнены
-            if (name != null && disease != null && doctor != null && specialization != null && date != null && status != null) {
-                // Добавляем новую строку в таблицу
-                tableModel.addRow(new Object[]{name, disease, doctor, specialization, date, status});
-            } else {
-                // Сообщение об ошибке
-                JOptionPane.showMessageDialog(null, "Все поля должны быть заполнены!");
+                // Проверка, что поля не пустые и не равны null, так как сама программа добавляет пустые строки
+                if (name != null && !name.trim().isEmpty() &&
+                        disease != null && !disease.trim().isEmpty() &&
+                        doctor != null && !doctor.trim().isEmpty() &&
+                        specialization != null && !specialization.trim().isEmpty() &&
+                        date != null && !date.trim().isEmpty() &&
+                        status != null && !status.trim().isEmpty()) {
+
+                    tableModel.addRow(new Object[]{name, disease, doctor, specialization, date, status});
+                } else {
+                    throw new IllegalArgumentException("Все поля должны быть заполнены!");
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Ошибка добавления пациента: "
+                        + ex.getMessage(), "   エラー", JOptionPane.ERROR_MESSAGE);
             }
         };
     }
+
+
 
     /**
      * Создает слушатель для удаления пациента.
@@ -44,11 +55,16 @@ public class Listeners {
      */
     public static ActionListener getDeletePatientListener(DefaultTableModel tableModel, JTable dataTable, JFrame frame) {
         return e -> {
-            int selectedRow = dataTable.getSelectedRow();
-            if (selectedRow != -1) {
-                tableModel.removeRow(selectedRow);
-            } else {
-                JOptionPane.showMessageDialog(frame, "Выберите пациента для удаления.");
+            try {
+                int selectedRow = dataTable.getSelectedRow();
+                if (selectedRow != -1) {
+                    tableModel.removeRow(selectedRow);
+                } else {
+                    throw new IllegalArgumentException("Пациент для удаления не выбран");
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(frame, "Ошибка удаления пациента: " + ex.getMessage(),
+                        "   エラー", JOptionPane.ERROR_MESSAGE);
             }
         };
     }
@@ -75,21 +91,27 @@ public class Listeners {
     public static ActionListener getSearchListener(JTable dataTable, JTextField searchField,
                                                    JComboBox<String> searchType, JFrame frame) {
         return e -> {
-            String searchText = searchField.getText().toLowerCase();
-            int searchColumn = searchType.getSelectedIndex() == 1 ? 0 : 2; // 0 - имя пациента, 1 - имя врача
+            try {
+                String searchText = searchField.getText().toLowerCase();
+                int searchColumn = searchType.getSelectedIndex() == 1 ? 0 : 2; // 0 - имя пациента, 1 - имя врача
 
-            boolean found = false;
-            for (int i = 0; i < dataTable.getRowCount(); i++) {
-                String value = dataTable.getValueAt(i, searchColumn).toString().toLowerCase();
-                if (value.contains(searchText)) {
-                    dataTable.setRowSelectionInterval(i, i);
-                    found = true;
-                    break;
+                boolean found = false;
+                for (int i = 0; i < dataTable.getRowCount(); i++) {
+                    String value = dataTable.getValueAt(i, searchColumn).toString().toLowerCase();
+                    if (value.contains(searchText)) {
+                        dataTable.setRowSelectionInterval(i, i);
+                        found = true;
+                        break;
+                    }
                 }
+                if (!found) {
+                    throw new IllegalArgumentException("Ничего не найдено バカ");
+                }
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(frame, "Ошибка поиска: " + ex.getMessage(),
+                        "   エラー", JOptionPane.ERROR_MESSAGE);
             }
-            if (!found) {
-                JOptionPane.showMessageDialog(frame, "Ничего не найдено.");
-            }
+
         };
     }
 

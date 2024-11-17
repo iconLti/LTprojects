@@ -1,0 +1,51 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<patients>
+<patient>
+<name>Иван Иванов</name>
+<disease>ОРВИ</disease>
+<doctor>Доктор А</doctor>
+<specialization>Терапевт</specialization>
+<date>01.10.2024</date>
+<status>Принят</status>
+</patient>
+<patient>
+<name>Тим</name>
+<disease>Депрессия</disease>
+<doctor>Доктор Б</doctor>
+<specialization>Психиатр</specialization>
+<date>02.10.2024</date>
+<status>Ожидание</status>
+</patient>
+<patient>
+<name>Мария Петрова</name>
+<disease>Астма</disease>
+<doctor>Доктор В</doctor>
+<specialization>Терапевт</specialization>
+<date>03.10.2024</date>
+<status>Отменен</status>
+</patient>
+<patient>
+<name>Алексей Смирнов</name>
+<disease>Гастрит</disease>
+<doctor>Доктор Г</doctor>
+<specialization>Гастроэнтеролог</specialization>
+<date>04.10.2024</date>
+<status>Принят</status>
+</patient>
+<patient>
+<name>Ольга Кузнецова</name>
+<disease>Мигрень</disease>
+<doctor>Доктор Д</doctor>
+<specialization>Невролог</specialization>
+<date>05.10.2024</date>
+<status>Ожидание</status>
+</patient>
+<patient>
+<name>Виктор Тихонов</name>
+<disease>Артрит</disease>
+<doctor>Доктор З</doctor>
+<specialization>Ревматолог</specialization>
+<date>08.10.2024</date>
+<status>Принят</status>
+</patient>
+</patients>
