@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b2ecdaf-c136-4026-a16e-76fbd70805d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/digits.cpp" beforeDir="false" />
@@ -45,15 +43,21 @@
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/include/Tree.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab03/src/ClinicApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClinicApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab03/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab03/src/Listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Listeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/WordPDF/~$b07-OOP_Loktionov_3311.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/WordPDF/~$b08-OOP_Loktionov_3311.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/test/java/org/example/AppTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" afterDir="false" />
@@ -87,8 +91,10 @@
   "keyToString": {
     "Application.ClinicApp.executor": "Run",
     "JUnit.ListenersTest.executor": "Run",
+    "JUnit.ListenersTest.testDeletePatientListener.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true"
   }
@@ -97,8 +103,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\LETI\II\OOP\Java projects\Hospital-lab09_mav\src\main\java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ListenersTest">
+    <configuration name="ClinicApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClinicApp" />
+      <module name="Hospital-lab09_mav" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ListenersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital-lab09_mav" />
       <option name="PACKAGE_NAME" value="" />
@@ -108,9 +124,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ListenersTest.testDeletePatientListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hospital-lab09_mav" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ListenersTest" />
+      <option name="METHOD_NAME" value="testDeletePatientListener" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ListenersTest" />
+        <item itemvalue="Application.ClinicApp" />
+        <item itemvalue="JUnit.ListenersTest.testDeletePatientListener" />
       </list>
     </recent_temporary>
   </component>
