@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c3d6d01-7958-4cf4-ba55-2b0a0e394d69" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/ClinicHTML.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/ClinicPDF.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/ClinicApp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/GUI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/Listeners.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/ReportGenerator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/XMLfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/ClinicApp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/GUI.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/Listeners.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/ReportGenerator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/XMLfile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/jquery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/jqueryUI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/module-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/copy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/jquery-3.6.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/search-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/tag-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/mainReport.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/mainReport02.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/mainReport03.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/report.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/docs/report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ClinicApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Listeners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ReportGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/XMLfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/digits.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/digits.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/docs/lab01-отчётЛоктионовОсипова--3311.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/lab01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/lab01.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/test.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/test2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/test2.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/classTest.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/classTest.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/m_lab01.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/cppSets/Intersection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/cppSets/SetArray.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/cppSets/SetBitArray.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/cppSets/SetList.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/cppSets/SetWord.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/docs/plan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/hFiles/Intersection.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/hFiles/SetArray.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/hFiles/SetBitArray.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/hFiles/SetList.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/hFiles/SetWord.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab02/src/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/Docs/lab03-отчётЛоктионовОсипова--3311.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/Docs/lab03-отчётЛоктионовОсипова--3311.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/Node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/Tree.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/include/Node.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/include/Tree.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/WordPDF/~$b07-OOP_Loktionov_3311.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/WordPDF/~$b08-OOP_Loktionov_3311.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/testLab01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/testLab01.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/testLab01.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/testLab01.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2otoahsU1GhNIMJdMrAQHJ0LrBY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClinicApp.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/LETI/II/OOP/Java projects/Hospital-lab07_mav/src/docs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\LETI\II\OOP\Java projects\Hospital-lab07_mav\src\docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\LETI\II\OOP\Java projects\Hospital-lab10_mav\src" />
+      <recent name="C:\Users\User\Desktop\LETI\II\OOP\Java projects\Hospital-lab10_mav\src\main\java" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c3d6d01-7958-4cf4-ba55-2b0a0e394d69" name="Changes" comment="" />
+      <created>1731698297951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731698297951</updated>
+    </task>
+    <servers />
+  </component>
+</project>

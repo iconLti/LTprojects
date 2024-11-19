@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClinicPDF" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0e262d2-fb44-479e-9743-8a532c6e6506">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ClinicAppData"/>
+	<queryString language="xPath">
+		<![CDATA[/patients/patient]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="name"/>
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="disease" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="disease"/>
+		<fieldDescription><![CDATA[disease]]></fieldDescription>
+	</field>
+	<field name="doctor" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="doctor"/>
+		<fieldDescription><![CDATA[doctor]]></fieldDescription>
+	</field>
+	<field name="specialization" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="specialization"/>
+		<fieldDescription><![CDATA[specialization]]></fieldDescription>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="date"/>
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="status"/>
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="250" y="10" width="300" height="40" uuid="d08b454c-276a-41aa-9465-82610a1618de"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[ClinicAPP PDF format ^_^]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="7b4bd0b6-2a2e-4eb1-9e30-4b5314e255d4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57c1a7bf-d3f8-46a8-8d5b-0d2c644dfb2a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="30" uuid="e073844c-7789-419d-ab17-3f0795690c4a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="699bfe52-48ec-4e8b-993b-ccae380e146e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[disease]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="90" height="30" uuid="16496627-2b59-4ddc-8776-985eac4491c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef70b3a3-8035-4357-a0c9-1f9510c32e60"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[doctor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="1" width="100" height="30" uuid="93b13976-08a8-4123-89ca-c52ed3940014">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad112cd5-f7d9-40ea-844b-4d8e7d64e856"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[specialization]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="1" width="100" height="30" uuid="ce85343b-86b9-47fa-aaef-471e5b2033ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="34dd3962-dc87-4a31-8c0e-edc9ef4a9358"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="0" width="100" height="30" uuid="2bf9fc3d-5cfa-4227-a4ce-8a204bcc40f2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="86ebb772-7e41-4c69-9587-1638f74fe357"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="550" height="1" uuid="22e654e0-7030-4ebe-8a2a-8c0ce1f68f5b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="1767135d-9b8c-4ba6-a7dd-ec6d949adaf3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57c1a7bf-d3f8-46a8-8d5b-0d2c644dfb2a"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="8caf1280-9033-4811-873f-7423e0226b0b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="699bfe52-48ec-4e8b-993b-ccae380e146e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{disease}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="80" height="30" uuid="7ee1bea1-a77d-4822-ae30-f2f5b5a5f708">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef70b3a3-8035-4357-a0c9-1f9510c32e60"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{doctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="344c10e2-f57e-47ff-9e33-4712fd2cc524">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad112cd5-f7d9-40ea-844b-4d8e7d64e856"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{specialization}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="8597c288-024b-4410-bde8-3e997ff652fd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="34dd3962-dc87-4a31-8c0e-edc9ef4a9358"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="0" width="100" height="30" uuid="83722ec4-9e45-45fb-9c56-91bf4f5330cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="86ebb772-7e41-4c69-9587-1638f74fe357"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="550" height="1" uuid="179cbee1-8a41-420b-af62-7acc0b42d439"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
