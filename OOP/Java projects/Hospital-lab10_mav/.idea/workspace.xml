@@ -5,84 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c3d6d01-7958-4cf4-ba55-2b0a0e394d69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/ClinicHTML.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/ClinicPDF.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/ClinicApp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/GUI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/Listeners.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/ReportGenerator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/XMLfile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/allclasses-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/allpackages-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/ClinicApp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/GUI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/Listeners.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/ReportGenerator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/class-use/XMLfile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/jquery.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/legal/jqueryUI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/module-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/copy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/resource-files/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/jquery-3.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/search-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/script-files/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/tag-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/javaDoc/type-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/mainReport.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/mainReport02.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/mainReport03.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/report.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/docs/report.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClinicApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Listeners.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ReportGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/XMLfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/digits.cpp" beforeDir="false" />
@@ -134,6 +56,10 @@
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/main/java/org/example/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/WordPDF/~$b10-OOP_Loktionov_3311.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.exe" afterDir="false" />

@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b2ecdaf-c136-4026-a16e-76fbd70805d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CourseWork/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CourseWork/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+    <list default="true" id="40da38d5-97b4-480f-860d-d7e6fb3d48ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/.vscode/settings.json" beforeDir="false" />
@@ -56,7 +52,7 @@
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/WordPDF/~$b08-OOP_Loktionov_3311.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/material_theme_project_new.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/misc.xml" beforeDir="false" />
@@ -79,87 +75,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2p3wIux8QkLWBdF8iFdQeMRmBhI" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2qf8tY9owiPP0Bo1Kqv1DvEDASm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ClinicApp.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ListenersTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ListenersTest.testDeletePatientListener.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ClinicApp.executor": "Run",
+    "Application.GUI.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\LETI\II\OOP\Java projects\Hospital-lab09_mav\src\main\java" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.ListenersTest">
-    <configuration name="ClinicApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClinicApp" />
-      <module name="Hospital-lab09_mav" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListenersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hospital-lab09_mav" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListenersTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ListenersTest.testDeletePatientListener" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hospital-lab09_mav" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ListenersTest" />
-      <option name="METHOD_NAME" value="testDeletePatientListener" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.ListenersTest" />
-        <item itemvalue="Application.ClinicApp" />
-        <item itemvalue="JUnit.ListenersTest.testDeletePatientListener" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6b2ecdaf-c136-4026-a16e-76fbd70805d9" name="Changes" comment="" />
-      <created>1732007990689</created>
+      <changelist id="40da38d5-97b4-480f-860d-d7e6fb3d48ad" name="Changes" comment="" />
+      <created>1735042483552</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732007990689</updated>
+      <updated>1735042483552</updated>
     </task>
     <servers />
   </component>
