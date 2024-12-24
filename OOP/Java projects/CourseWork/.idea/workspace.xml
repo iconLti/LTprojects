@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40da38d5-97b4-480f-860d-d7e6fb3d48ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab01/digits.cpp" beforeDir="false" />
@@ -46,23 +42,13 @@
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/include/Tree.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../AaDS/С++ code/lab03/src/main.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/WordPDF/~$b07-OOP_Loktionov_3311.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab07_mav/src/docs/report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/WordPDF/~$b08-OOP_Loktionov_3311.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/mainReport.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab08_mav/src/docs/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab09_mav/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab09_test/src/test/java/org/example/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab10_mav/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab10_mav/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab10_mav/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab10_mav/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hospital-lab10_mav/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Hospital-lab10_mav/src/docs/WordPDF/Lab10-OOP_Loktionov_3311.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/3311_Loktionov_CourseWork.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/3311_Loktionov_CourseWork.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/3311_Loktionov_CourseWork.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/3311_Loktionov_CourseWork.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/mainReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/mainReport.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/~$11_Loktionov_CourseWork.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/~$11_Loktionov_CourseWork.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hospital-lab10_mav/src/docs/WordPDF/~$b10-OOP_Loktionov_3311.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../OofCom/Lab01/lab01.cpp" afterDir="false" />
@@ -78,24 +64,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2qf8tY9owiPP0Bo1Kqv1DvEDASm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ClinicApp.executor": "Run",
-    "Application.GUI.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClinicApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
